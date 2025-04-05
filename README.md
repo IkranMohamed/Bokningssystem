@@ -6,13 +6,14 @@ Systemet ska hantera bokningar, visa lediga tider och skicka bekräftelser till 
 Singleton-mönstret för att hantera databasanslutningar. Detta säkerställer att det bara finns en instans av databasanslutningen, vilket förbättrar prestanda och minskar risken för fel.
 
 ### Use Case
-Användningsfall:
-När en användare loggar in i systemet och gör en bokning, hämtas tillgängliga tider från databasen. Singleton säkerställer att samma databasinstans används för att läsa och skriva bokningsdata.
+Namn: Skapa bokning
+Aktör: Inloggad användare
+Beskrivning: När en användare gör en bokning, hämtas lediga tider från databasen. Singleton garanterar att samma instans används varje gång systemet kommunicerar med databasen.
 
 ### User story
 Som utvecklare
-vill jag att systemet alltid använder en och samma databasanslutning
-så att vi undviker onödiga prestandaproblem och datakonflikter.
+vill jag att systemet alltid använder samma databasinstans
+så att vi slipper prestandaproblem och undviker att flera anslutningar öppnas samtidigt.
 
 # Bakgrund & Syfte
  Syftet är att förenkla bokningsprocessen och minska dubbelbokningar. företag. Eftersom många företag eller tjänsteleverantörer behöver ett digitalt sätt att hantera sina bokningar. 
