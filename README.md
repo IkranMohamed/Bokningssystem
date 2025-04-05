@@ -7,7 +7,9 @@ Singleton-mönstret för att hantera databasanslutningar. Detta säkerställer a
 
 ### Use Case
 Namn: Skapa bokning
+
 Aktör: Inloggad användare
+
 Beskrivning: När en användare gör en bokning, hämtas lediga tider från databasen. Singleton garanterar att samma instans används varje gång systemet kommunicerar med databasen.
 
 ### User story
